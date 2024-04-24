@@ -1,6 +1,5 @@
 ## How to Compile
 
-## PROGRAM ABORTS PARSING AFTER ENCOUNTERING A SYNTAX ERROR SO SOMETHING LIKE ./parsing < error.txt WON'T WORK
 
 ### Using Makefile
 
@@ -8,7 +7,6 @@
 make
 ./parsing
 ```
-
 
 ### Alternatively
 
@@ -19,5 +17,9 @@ gcc bison.tab.c lex.yy.c -lfl -o parsing
 ./parsing
 ```
 
-### AFTER TYPING ./parsing , YOU CAN TYPE AN EXPRESSION AND THEN PRESS ENTER TO IDENTIFY WHETHER IT HAS SYNTAX ERRORS OR NOT
-### BASED ON THE GIVEN CFGS IN THE PDF FILE: THE EXPRESSIONS ARE PLUS, MINUS, TIMES, AND PARENTHESES. THE OPERANDS ARE EITHER AN INTEGER OR A SINGLE LETTER LOWER CASE VARIABLE
+### Instructions
+
+## The program aborts parsing after encountering a syntax error so something like ./parsing < error.txt won't work since error.txt contains 10 lines of expressions
+### After typing ./parsing , you can type an expression and press enter to identify whether or not it is syntactically correct
+### Based on the given CFG in the PDF file: the expressions are plus, minus, times, and parentheses. The operands are either an integer or a single-letter lower-case variable.
+
