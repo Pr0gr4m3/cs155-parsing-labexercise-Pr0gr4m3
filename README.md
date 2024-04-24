@@ -1,1 +1,23 @@
-hello
+## How to Compile
+
+## PROGRAM ABORTS PARSING AFTER ENCOUNTERING A SYNTAX ERROR SO SOMETHING LIKE ./parsing < error.txt WON'T WORK
+
+### Using Makefile
+
+```bash
+make
+./parsing
+```
+
+
+### Alternatively
+
+```bash
+bison -d bison.y
+flex flex.l
+gcc bison.tab.c lex.yy.c -lfl -o parsing
+./parsing
+```
+
+### AFTER TYPING ./parsing , YOU CAN TYPE AN EXPRESSION AND THEN PRESS ENTER TO IDENTIFY WHETHER IT HAS SYNTAX ERRORS OR NOT
+### BASED ON THE GIVEN CFGS IN THE PDF FILE: THE EXPRESSIONS ARE PLUS, MINUS, TIMES, AND PARENTHESES. THE OPERANDS ARE EITHER AN INTEGER OR A SINGLE LETTER LOWER CASE VARIABLE
